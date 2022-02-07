@@ -11,7 +11,7 @@ import { deleteProduct, getProducts } from "../../redux/apiCalls";
 export default function ProductList() {
   const [data, setData] = useState(productRows);
   const dispatch = useDispatch();
-  const products = useSelector(state => state.products.products);
+  const products = useSelector(state => state.products.products.products);
 
   useEffect(() => {
     getProducts(dispatch);
