@@ -11,7 +11,7 @@ export default function Product() {
 	const location = useLocation();
 	const productId = location.pathname.split('/')[2];
 	const [productStats, setProductStats] = useState([]);
-	const product = useSelector(state => state.products.products.find(product => product._id === productId));
+	const product = useSelector(state => state.products.products.products.find(product => product._id === productId));
 
 	const MONTHS = useMemo(() => [
 		'Jan',
